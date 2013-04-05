@@ -46,6 +46,7 @@ public class Game extends Observable{
         itens.add("Options!");
         itens.add("Sair");
         MenuView menu = new MenuView(itens);
+        menu.setPreferredSize(new Dimension(800, 600));
 //        c.setBounds(0, 0, 810, 610);
 //        tela.setPreferredSize(new Dimension(800, 600));
 //        tela.setLayout(null);
@@ -55,6 +56,7 @@ public class Game extends Observable{
 //        c.createBufferStrategy(2);
 //        strategy = c.getBufferStrategy();
 //        c.requestFocus();
+        jframe.setContentPane(menu);
         jframe.pack();
         jframe.setResizable(false);
         jframe.setVisible(true);

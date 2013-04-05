@@ -5,8 +5,14 @@
 package framework;
 
 import java.awt.Button;
+import java.awt.Dimension;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.util.ArrayList;
-
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import org.w3c.dom.css.Rect;
 
 /**
  *
@@ -23,18 +29,21 @@ public class MenuView extends javax.swing.JPanel {
         tituloLabel.setText("Navinhas"); //Game.getNome());
 
         menuItemButton.setVisible(false);
+        Point location = new Point(20, 110);
+        
         for(String item: itens){
-            Button b = new Button(item);
-            b.setLocation(menuItemButton.getLocation());
-            b.setSize(menuItemButton.getSize());
+            JButton b = new JButton(item);
+            b.setLocation(location);
+            b.setSize(new Dimension(760, 80));
             b.setFont(menuItemButton.getFont());
-            b.setVisible(true);
             this.add(b);
-            menuItemButton.setLocation(menuItemButton.getLocation().x, menuItemButton.getLocation().y + menuItemButton.getHeight() + 10);
-            
+//            menuItemButton.setLocation(menuItemButton.getLocation().x, menuItemButton.getLocation().y + menuItemButton.getHeight() + 10);
+            location.y += 100;
         }
+        this.invalidate();
+        this.repaint();
     }
-    
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -70,9 +79,9 @@ public class MenuView extends javax.swing.JPanel {
                 .addComponent(tituloLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(menuItemButton)
-                .addContainerGap(433, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(menuItemButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(383, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
