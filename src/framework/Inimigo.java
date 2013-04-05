@@ -11,4 +11,13 @@ package framework;
  */
 class Inimigo extends Entidade{
 
+    @Override
+    public void colidiu(Entidade e) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+    
+    public Inimigo clonar(){
+        return this;
+    }
+
 }

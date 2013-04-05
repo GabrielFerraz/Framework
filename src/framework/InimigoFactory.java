@@ -14,7 +14,7 @@ import java.util.ArrayList;
 class InimigoFactory {
     static ArrayList<Inimigo> inimigos;
     public static void setInimigos(ArrayList<Inimigo> inimigos){
-        InimigoFactory.inimigos = inimigos;
+        InimigoFactory.inimigos = inimigos; 
     }
     public static Inimigo novoInimigo(int codigo){
         return ((Inimigo) inimigos.get(codigo)).clonar();
