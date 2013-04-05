@@ -26,10 +26,12 @@ public abstract class Entidade extends Observer {
     
     public abstract void colidiu(Entidade e);
     
-    public void update(Graphics g){ 
+    public void update(){ }
+
+    public void draw(Graphics g){
         sprite.draw(g, posX, posX);
     }
-
+    
     public int getPosX() {
         return posX;
     }

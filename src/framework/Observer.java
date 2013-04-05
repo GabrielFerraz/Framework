@@ -13,6 +13,6 @@ import java.awt.Graphics;
  */
 public abstract class Observer {
 
-    abstract void update(Graphics g);
+    abstract void update();
 
 }
