@@ -9,15 +9,10 @@ package framework;
  *
  * @author gabriel_ferraz
  */
-class Inimigo extends Entidade{
+public abstract class Inimigo extends Entidade{
 
-    @Override
-    public void colidiu(Entidade e) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    public abstract void colidiu(Entidade e);
     
-    public Inimigo clonar(){
-        return this;
-    }
+    public abstract Inimigo clonar();
 
 }

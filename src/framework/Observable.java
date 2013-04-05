@@ -19,7 +19,7 @@ public abstract class Observable {
     }
     public static void notifyObservers(){
         for(Observer o: observers){
-            o.update(Game.g);
+            o.update();
         }
     }
 }
