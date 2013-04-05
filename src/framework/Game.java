@@ -86,30 +86,19 @@ public class Game extends Observable{
         
         @Override
         public void keyPressed(KeyEvent e) {
-            if (e.getKeyCode() == KeyEvent.VK_UP) {
-                botoes[CIMA] = 1;
-            }
-            if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            }
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {j.botaoAtirar(true);}
+            if (e.getKeyCode() == KeyEvent.VK_UP) {botoes[CIMA] = 1; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_DOWN) {botoes[BAIXO] = 1; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_LEFT) {botoes[ESQUERDA] = 1; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {botoes[DIREITA] = 1; j.botaoMover(botoes);}
         }
         @Override
         public void keyReleased(KeyEvent e){
-            if (e.getKeyCode() == KeyEvent.VK_UP) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            }
-            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            }
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {j.botaoAtirar(false);}
+            if (e.getKeyCode() == KeyEvent.VK_UP) {botoes[CIMA] = 0; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_DOWN) {botoes[BAIXO] = 0; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_LEFT) {botoes[ESQUERDA] = 0; j.botaoMover(botoes);}
+            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {botoes[DIREITA] = 0; j.botaoMover(botoes);}
         }
     }
     

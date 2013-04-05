@@ -9,10 +9,16 @@ package framework;
  *
  * @author gabriel_ferraz
  */
-class Jogador extends Entidade{
+abstract class Jogador extends Entidade{
 
-    boolean perdeu() {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
+    Estado estado;  
+    
+    boolean perdeu(){return false; }
+    
+    public void colidiu(Entidade e){  }
+    
+    public final void botaoAtirar(boolean pressionado){ }
+    
+    public final void botaoMover(int[] botoes){  }
 
 }
