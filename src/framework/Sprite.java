@@ -22,4 +22,12 @@ class Sprite {
     public void draw(Graphics g,int x,int y) {
         g.drawImage(imagem,x,y,null);
     }
+    
+    public int getHeight(){
+        return imagem.getHeight(null);
+    }
+    
+    public int getWidth() {
+        return imagem.getWidth(null);
+    }
 }

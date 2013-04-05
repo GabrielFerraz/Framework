@@ -9,6 +9,10 @@ package framework;
  *
  * @author gabriel_ferraz
  */
-class Jogador {
+class Jogador extends Entidade{
+
+    boolean perdeu() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 
 }

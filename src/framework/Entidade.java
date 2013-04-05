@@ -5,13 +5,15 @@
 
 package framework;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author gabriel_ferraz
  */
-public abstract class Entidade {
-    public Sprite sprite;
-    public int velocidadeX, velocidadeY, posX, posY;
+public abstract class Entidade extends Observer {
+    Sprite sprite;
+    int velocidadeX, velocidadeY, posX, posY;
     
     public Entidade(){
         
@@ -20,6 +22,26 @@ public abstract class Entidade {
     public void colidiu(Entidade e){
         
     }
+    public void update(Graphics g){ 
+        sprite.draw(g, posX, posX);
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public int getHeight() {
+        return sprite.getHeight();
+    }
+    
+    public int getWidth(){
+        return sprite.getWidth();
+    }
+    
     
     
     

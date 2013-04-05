@@ -9,6 +9,6 @@ package framework;
  *
  * @author gabriel_ferraz
  */
-class Inimigo extends Entidade{
+class Tiro extends Entidade{
 
 }

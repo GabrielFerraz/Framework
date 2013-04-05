@@ -19,9 +19,5 @@ public abstract class Observable {
     public void addObserver(Observer o){
         observers.add(o);
     }
-    public void notifyObservers(){
-        for(Observer o: observers){
-            o.update();
-        }
-    }
+    public abstract void notifyObservers();
 }

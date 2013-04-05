@@ -5,12 +5,14 @@
 
 package framework;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author gabriel_ferraz
  */
 public abstract class Observer {
 
-    abstract void update();
+    abstract void update(Graphics g);
 
 }
