@@ -5,11 +5,19 @@
 
 package framework;
 
+import java.util.HashMap;
+
 /**
  *
  * @author gabriel_ferraz
  */
-class Tiro extends Entidade{
+public class Tiro extends Entidade{
+    
+    
+    
+    public Tiro(HashMap h){
+        super(h);
+    }
     
     public void colidiu(Entidade e){
     }

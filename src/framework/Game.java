@@ -27,7 +27,7 @@ public class Game extends Observable{
     static ArrayList<Tiro> tiros;
     static int frameCount;
     static InimigoFactory inimigoFactory;
-    static Jogador j;
+    static AbstractJogador j;
     static Graphics2D g;
     static int[] botoes = new int[4];
     static Canvas c;
@@ -68,7 +68,6 @@ public class Game extends Observable{
         });
 
         fases = f;
-        //TODO: chamar menu
     }
     
     public static void rodarFase(){

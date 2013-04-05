@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.static 
+ * and open the template in the editor.
  */
 
 package framework;
@@ -9,16 +9,10 @@ package framework;
  *
  * @author gabriel_ferraz
  */
-abstract class Jogador extends Entidade{
-
-    Estado estado;  
+public class Jogador extends AbstractJogador{
     
-    boolean perdeu(){return false; }
-    
-    public void colidiu(Entidade e){  }
-    
-    public final void botaoAtirar(boolean pressionado){ }
-    
-    public final void botaoMover(int[] botoes){  }
+    public Jogador (){
+        
+    }
 
 }
