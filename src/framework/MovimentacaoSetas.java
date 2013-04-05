@@ -13,10 +13,6 @@ import java.awt.event.KeyEvent;
  * @author gabriel_ferraz
  */
 class MovimentacaoSetas extends KeyAdapter {
-    
-    public MovimentacaoSetas(Jogador jogador){
-        
-    }
         
     @Override
     public void keyPressed(KeyEvent e) {
@@ -29,7 +25,7 @@ class MovimentacaoSetas extends KeyAdapter {
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
         }
         if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-        }
+        } 
     }
     @Override
     public void keyReleased(KeyEvent e){

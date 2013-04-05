@@ -7,6 +7,8 @@ package framework;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 /**
@@ -21,6 +23,13 @@ public class Game extends Observable{
     InimigoFactory inimigoFactory;
     Jogador j;
     Graphics2D g;
+    int[] botoes = new int[4];
+    
+    final static int CIMA = 0;
+    final static int BAIXO = 1;
+    final static int ESQUERDA = 2;
+    final static int DIREITA = 3;
+    
     
     public Game(){
     }
@@ -28,6 +37,7 @@ public class Game extends Observable{
     public void rodarFase(){
         Fase fase = fases.get(0);
         while((!fase.fim()) || (!inimigos.isEmpty()) || j.perdeu()){
+            
             notifyObservers();
             verificaColisoes();
             verTempo(fase);
@@ -72,5 +82,35 @@ public class Game extends Observable{
         }
     }
     
+    private class MovimentacaoSetas extends KeyAdapter {
+        
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_UP) {
+                botoes[CIMA] = 1;
+            }
+            if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            }
+        }
+        @Override
+        public void keyReleased(KeyEvent e){
+            if (e.getKeyCode() == KeyEvent.VK_UP) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            }
+            if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+            }
+        }
+    }
     
 }

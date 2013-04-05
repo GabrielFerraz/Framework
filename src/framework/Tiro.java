@@ -10,5 +10,7 @@ package framework;
  * @author gabriel_ferraz
  */
 class Tiro extends Entidade{
-
+    
+    public void colidiu(Entidade e){
+    }
 }
