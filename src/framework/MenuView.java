@@ -8,6 +8,8 @@ import java.awt.Button;
 import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -18,12 +20,12 @@ import org.w3c.dom.css.Rect;
  *
  * @author Erik
  */
-public class MenuView extends javax.swing.JPanel {
+public class MenuView extends javax.swing.JPanel{
 
     /**
      * Creates new form Menu
      */
-    public MenuView(ArrayList<String> itens) {
+    public MenuView(ArrayList<ComandoMenu> comandos) {
         initComponents();
         
         tituloLabel.setText("Navinhas"); //Game.getNome());
@@ -31,11 +33,27 @@ public class MenuView extends javax.swing.JPanel {
         menuItemButton.setVisible(false);
         Point location = new Point(20, 110);
         
-        for(String item: itens){
+        for(final ComandoMenu comando: comandos){
+            String item = comando.getNome();
             JButton b = new JButton(item);
             b.setLocation(location);
             b.setSize(new Dimension(760, 80));
             b.setFont(menuItemButton.getFont());
+            
+            b.addMouseListener(new MouseListener() {
+                final ComandoMenu c = comando;
+                public void mouseClicked(MouseEvent e) {
+                    c.acao();
+                }
+                public void mousePressed(MouseEvent e) {}
+
+                public void mouseReleased(MouseEvent e) {}
+
+                public void mouseEntered(MouseEvent e) {}
+
+                public void mouseExited(MouseEvent e) {}
+            });
+            
             this.add(b);
 //            menuItemButton.setLocation(menuItemButton.getLocation().x, menuItemButton.getLocation().y + menuItemButton.getHeight() + 10);
             location.y += 100;

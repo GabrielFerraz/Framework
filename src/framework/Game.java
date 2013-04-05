@@ -5,6 +5,9 @@
 
 package framework;
 
+import framework.comandos.ComandoNovoJogo;
+import framework.comandos.ComandoOpcoes;
+import framework.comandos.ComandoSair;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -41,10 +44,10 @@ public class Game extends Observable{
     final static int DIREITA = 3;
     
     public static void initGame(ArrayList<Fase> f){
-        ArrayList<String> itens = new ArrayList<String>();
-        itens.add("Novo jogo!");
-        itens.add("Options!");
-        itens.add("Sair");
+        ArrayList<ComandoMenu> itens = new ArrayList<ComandoMenu>();
+        itens.add(new ComandoNovoJogo());
+        itens.add(new ComandoOpcoes());
+        itens.add(new ComandoSair());
         MenuView menu = new MenuView(itens);
         menu.setPreferredSize(new Dimension(800, 600));
 //        c.setBounds(0, 0, 810, 610);
